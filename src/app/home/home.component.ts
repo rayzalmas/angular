@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ARTICLES } from '../articles/articles-model/articles-mock';
+import { ACTIVITIES } from '../activities/activities-model/activities-mock';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  articles = ARTICLES;
+  activities = ACTIVITIES;
+
+  constructor() {}
 
   ngOnInit() {
   }

@@ -3,15 +3,21 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { ActivitiesComponent } from './activities/activities.component';
 import { SharedModule } from './shared/shared.module';
 import { HomeComponent } from './home/home.component';
+import { HistoryComponent } from './history/history.component';
+import { NetworkComponent } from './network/network.component';
+import { ProgramComponent } from './program/program.component';
+import { StructureComponent } from './structure/structure.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ActivitiesComponent,
-    HomeComponent
+    HomeComponent,
+    HistoryComponent,
+    NetworkComponent,
+    ProgramComponent,
+    StructureComponent
   ],
   imports: [
     BrowserModule,

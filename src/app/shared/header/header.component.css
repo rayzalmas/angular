@@ -1,0 +1,13 @@
+.navbar-brand {
+    height: auto;
+    padding: 0px;
+}
+
+.navbar-nav {
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+
+.global-page-header {
+    background-color: #FFC107 !important;
+}

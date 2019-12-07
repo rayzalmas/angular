@@ -1,0 +1,93 @@
+<section class="global-page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="block">
+                    <h2>{{activity.title}}</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a [routerLink]="['/']">
+                                <i class="ion-ios-home"></i>
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/siaran-pens']">
+                                Siaran Pens
+                            </a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="single-post">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="post-img">
+                    <img class="img-responsive" alt="" src="assets/images/blog/post-1.jpg">
+                </div>
+                <ul class="social-share">
+                    <h4>Share this info</h4>
+                    <li>
+                        <a href="#" class="Facebook">
+                            <i class="ion-social-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="Twitter">
+                            <i class="ion-social-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="Linkedin">
+                            <i class="ion-social-linkedin"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="Google Plus">
+                            <i class="ion-social-googleplus"></i>
+                        </a>
+                    </li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="works" class="works">
+    <div class="container">
+        <div class="section-heading">
+            <h1 class="title" data-wow-delay=".3s">Siaran Lainnya</h1>
+        </div>
+        <div class="row">
+            <div class="col-sm-3 col-xs-12" *ngFor="let activity of activities">
+                <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
+                    <div class="img-wrapper">
+                        <img src="assets/images/portfolio/item-{{activity.id}}.jpg" class="img-responsive" alt="this is a title" >
+                        <div class="overlay">
+                            <div class="buttons">
+                                <a [routerLink]="['/kegiatan/'+activity.id]">Baca</a>
+                            </div>
+                        </div>
+                    </div>
+                    <figcaption>
+                        <h4>
+                            <a [routerLink]="['/kegiatan/'+activity.id]">
+                                {{activity.title}}
+                            </a>
+                        </h4>
+                        <p>
+                            {{activity.createdAt | date:'longDate'}}
+                        </p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+</section>

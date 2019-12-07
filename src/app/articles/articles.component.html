@@ -1,21 +1,52 @@
-<article class="wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms" *ngFor="let article of articles">
-    <div class="blog-post-image">
-        <a [routerLink]="[article.id]"><img class="img-responsive" src="assets/images/blog/post-1.jpg" alt="" /></a>
-    </div>
-    <div class="blog-content">
-        <h2 class="blogpost-title">
-        <a [routerLink]="[article.id]">{{article.title}}</a>
-        </h2>
-        <div class="blog-meta">
-            <span>{{article.createdAt | date:'longDate'}}</span>
-            <span>by <a>{{article.createdBy}}</a></span>
-            <span>
-                <a *ngFor="let tag of article.tag">{{tag}}, </a>
-            </span>
+<section class="global-page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="block">
+                    <h2>Artikel</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a [routerLink]="['/']">
+                                <i class="ion-ios-home"></i>
+                                Beranda
+                            </a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
         </div>
-        <p>
-            {{article.shortDesc}}
-        </p>
-        <a [routerLink]="[article.id]"  class="btn btn-dafault btn-details">Continue Reading</a>
     </div>
-</article>
+</section>
+
+<section id="blog-full-width">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <app-sidebar></app-sidebar>
+            </div>
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-md-6" *ngFor="let article of articles">
+                        <article class="wow fadeInLeft" data-wow-delay=".3s" data-wow-duration="500ms">
+                            <div class="blog-post-image">
+                                <a [routerLink]="[article.id]"><img class="img-responsive" src="assets/images/portfolio/item-{{article.id}}.jpg" alt="" /></a>
+                            </div>
+                            <div class="blog-content">
+                                <h2 class="blogpost-title">
+                                    <a [routerLink]="[article.id]">{{article.title}}</a>
+                                </h2>
+                                <div class="blog-meta">
+                                    <span>{{article.createdAt | date:'longDate'}}</span>
+                                </div>
+                                <p>
+                                    {{article.shortDesc}}
+                                </p>
+                                <a [routerLink]="[article.id]"  class="btn btn-dafault btn-details">Lanjtukan Baca</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

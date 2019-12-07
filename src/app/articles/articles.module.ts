@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ArticlesRoutingModule } from './articles-routing.module';
 import { DetailArticleComponent } from './detail-article/detail-article.component';
 import { ArticlesComponent } from './articles.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -10,7 +11,8 @@ import { ArticlesComponent } from './articles.component';
   declarations: [DetailArticleComponent, ArticlesComponent],
   imports: [
     CommonModule,
-    ArticlesRoutingModule
+    ArticlesRoutingModule,
+    SharedModule
   ]
 })
 export class ArticlesModule { }

@@ -1,0 +1,44 @@
+<section class="global-page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="block">
+                    <h2>Tokoh</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a [routerLink]="['/']">
+                                <i class="ion-ios-home"></i>
+                                Home
+                            </a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="blog-full-width">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <app-sidebar></app-sidebar>
+            </div>
+            <div class="col-md-9">
+                <section id="team">
+                    <div class="row">
+                        <div class="col-md-6" *ngFor="let figure of figures">
+                            <div class="team-member wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".3s">
+                                <div class="team-img">
+                                    <img src="assets/images/team/team-1.jpg" class="team-pic" alt="">
+                                </div>
+                                <h3 class="team_name">{{figure.name}}</h3>
+                                <p class="team_designation">{{figure.birthdate | date:'longDate'}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</section>
