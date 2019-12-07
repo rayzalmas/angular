@@ -1,0 +1,21 @@
+<article class="wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms" *ngFor="let article of articles">
+    <div class="blog-post-image">
+        <a [routerLink]="[article.id]"><img class="img-responsive" src="assets/images/blog/post-1.jpg" alt="" /></a>
+    </div>
+    <div class="blog-content">
+        <h2 class="blogpost-title">
+        <a [routerLink]="[article.id]">{{article.title}}</a>
+        </h2>
+        <div class="blog-meta">
+            <span>{{article.createdAt | date:'longDate'}}</span>
+            <span>by <a>{{article.createdBy}}</a></span>
+            <span>
+                <a *ngFor="let tag of article.tag">{{tag}}, </a>
+            </span>
+        </div>
+        <p>
+            {{article.shortDesc}}
+        </p>
+        <a [routerLink]="[article.id]"  class="btn btn-dafault btn-details">Continue Reading</a>
+    </div>
+</article>

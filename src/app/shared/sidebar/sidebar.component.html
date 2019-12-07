@@ -1,0 +1,40 @@
+<div class="sidebar">
+    <div class="author widget">
+        <h3>Kalendar</h3>
+        <div class="myCalendar" id="myCalendar"></div>
+    </div>
+    <div class="recent-post widget">
+            <h3>Berita</h3>
+            <ul>
+                <li>
+                    <a href="#">Corporate meeting turns into a photoshooting.</a><br>
+                    <time>16 May, 2015</time>
+                </li>
+                <li>
+                    <a href="#">Statistics,analysis. The key to succes.</a><br>
+                    <time>15 May, 2015</time>
+                </li>
+                <li>
+                    <a href="#">Blog post without image, only text.</a><br>
+                    <time>14 May, 2015</time>
+                </li>
+                <li>
+                    <a href="#">Blog post with audio player. Share your creations.</a><br>
+                    <time>14 May, 2015</time>
+                </li>
+                <li>
+                    <a href="#">Blog post with classic Youtbube player.</a><br>
+                    <time>12 May, 2015</time>
+                </li>
+            </ul>
+        </div>
+    <div class="recent-post widget">
+        <h3>Artikel</h3>
+        <ul>
+            <li *ngFor="let article of articles">
+                <a [routerLink]="['/artikel/'+article.id]">{{article.title}}</a><br>
+                <time>{{article.createdAt | date:'longDate'}}</time>
+            </li>
+        </ul>
+    </div>
+</div>
