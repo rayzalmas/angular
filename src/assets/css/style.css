@@ -153,6 +153,7 @@ a:hover {
   position: relative;
   z-index: 99;
   text-align: center;
+  top: 25px;
 }
 
 .works-fit {
@@ -191,7 +192,8 @@ a:hover {
 }
 
 .navbar-header .navbar-brand {
-  padding: 5px 0;
+  height: auto;
+  padding: 0px;
 }
 
 .navbar-header .navbar-brand a {
@@ -254,6 +256,11 @@ a:hover {
   left: 0;
 }
 
+.navbar-nav {
+  margin-top: 5% !important;
+  margin-bottom: 2% !important;
+}
+
 .navbar-custom .dropdown-menu {
   position: absolute;
   display: block;
@@ -263,6 +270,7 @@ a:hover {
 
 .navbar-toggle {
   background: #222222;
+  top: 25px !important;
 }
 
 .navbar-toggle .icon-bar {
@@ -579,7 +587,9 @@ figure .overlay:hover a {
 figure .buttons {
   position: absolute;
   top: 45%;
-  left: 24%;
+  left: 20%;
+  right: 20%;
+  justify-content: center;
 }
 
 figure figcaption {
@@ -1239,6 +1249,7 @@ article {
   background: #fff;
   padding: 25px 0;
   color: #555;
+  border-top: 1px solid #dedede;
 }
 
 #footer .copyright {
