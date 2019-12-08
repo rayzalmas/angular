@@ -1,5 +1,5 @@
 export class Figures {
-    id: Number;
+    id: number;
     name: String;
     birthdate: Date;
     desc: String;
