@@ -30,9 +30,9 @@
                         <div class="col-md-6" *ngFor="let figure of figures">
                             <div class="team-member wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".3s">
                                 <div class="team-img">
-                                    <img src="assets/images/team/team-1.jpg" class="team-pic" alt="">
+                                    <a [routerLink]="[figure.id]"><img src="assets/images/team/team-1.jpg" class="team-pic" alt=""></a>
                                 </div>
-                                <h3 class="team_name">{{figure.name}}</h3>
+                                <a [routerLink]="['figure.id']"><h3 class="team_name">{{figure.name}}</h3></a>
                                 <p class="team_designation">{{figure.birthdate | date:'longDate'}}</p>
                             </div>
                         </div>
